@@ -9,7 +9,7 @@ Si existen las particiones oficiales se usan (recomendado: permiten comparar con
 otros trabajos). Si no, se hace una division estratificada 70/15/15.
 
 Ejemplos:
-    python preparar_datos.py --minc ~/Datos/minc-2500
+    python preparar_datos.py --minc ~/Datos/minc-2500 /Users/lulu/Downloads/minc-2500
     python preparar_datos.py --minc ~/Datos/minc-2500 --fraccion 0.1   # prueba rapida
 """
 
@@ -21,10 +21,7 @@ from collections import defaultdict
 
 from comun import CARPETA_SPLITS
 
-CLASES_POR_DEFECTO = [
-    "carpet", "ceramic", "fabric", "glass", "leather",
-    "metal", "plastic", "polishedstone", "stone", "wood",
-]
+CLASES_POR_DEFECTO = ["metal", "stone", "wood"]
 
 
 def leer_particion_oficial(minc, archivo, clases):
